@@ -1,0 +1,6 @@
+body { background: #1abc9c; font-family: Tahoma, Arial, sans-serif; color: #333; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #333; padding: 6px; }
+p, h4 { margin-bottom: 0; }
+h4 { font-size: 14px; }      /* подзаголовок 4-го уровня по заданию */
+img { height: 30px; width: auto; }  /* по заданию */
