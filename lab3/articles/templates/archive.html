@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Архив статей</title>
+  <style>
+    body { font-family: Tahoma, Arial, sans-serif; background:#1abc9c; color:#fff; }
+    .archive { width: 960px; margin: 24px auto; }
+    .one-post { margin-bottom: 18px; padding: 12px; background: rgba(0,0,0,.15); border-radius: 6px; }
+    .article-info { display:flex; justify-content:space-between; font-size:14px; opacity:.9; }
+    .post-title { margin: 0 0 6px 0; }
+  </style>
+</head>
+<body>
+  <div class="archive">
+    <h1>Архив статей</h1>
+
+    {% for post in posts %}
+      <div class="one-post">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <div class="article-info">
+          <div class="article-author">{{ post.author.username }}</div>
+          <div class="article-created-date">{{ post.created_date }}</div>
+        </div>
+        <p class="article-text">{{ post.get_excerpt }}</p>
+      </div>
+    {% endfor %}
+
+  </div>
+</body>
+</html>
